@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  localstack:
+    image: localstack/localstack
+    ports:
+      - "4566:4566"   # Default edge port for all AWS services
+      - "4571:4571"   # S3 legacy port (optional)
+    environment:
+      - DEBUG=1       # Enable debug mode
+      - SERVICES=s3,lambda,dynamodb,cloudformation # Specify which services to run (optional)
