@@ -9,4 +9,4 @@ ENV DEBUG=1
 ENV EDGE_PORT=4566
 
 # Start LocalStack
-CMD ["localstack", "start"]
+CMD ["localstack", "start","--host"]
